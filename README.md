@@ -1,4 +1,5 @@
-# Oh shit your boys learning to code. 
+# Hey thanks for clicking that
 Welcome to my lil corner of the internet. 
-This reminds me of Xanga- Fucking age check there.
+Ill try to keep it funky
+it dont stop till the panties drop
 I baisically steal music to recreate it and share it here ( for free )
