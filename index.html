@@ -30,6 +30,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#music">Music</a></li>
+        <li><a href="#shows">Shows</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -38,7 +39,7 @@
 
   <main>
     <section id="home" class="hero">
-      <div class="hero-bg" style="background-image: url('images/hero.jpg');"></div>
+      <div class="hero-bg" style="background-image: url('images/hero2.jpg');"></div>
       <div class="hero-scrim"></div>
       <div class="hero-content">
         <img src="images/logo.png" alt="Doosa" class="hero-logo">
@@ -105,19 +106,55 @@
       </a>
     </section>
 
+    <section id="shows" class="shows">
+      <div class="section-head">
+        <p class="section-tag">02 &mdash; Live &amp; Shows</p>
+        <h2>On stage, on the flyer</h2>
+        <p class="shows-sub">A few recent nights behind the decks &mdash; and the lineups that made it happen.</p>
+      </div>
+
+      <div class="live-strip">
+        <img src="images/live-1.jpg" alt="Doosa performing live" loading="lazy">
+        <img src="images/live-2.jpg" alt="Doosa performing live at a club show" loading="lazy">
+        <img src="images/live-3.jpg" alt="Crowd energy at a Doosa set" loading="lazy">
+      </div>
+
+      <div class="flyer-wall">
+        <a class="flyer" href="images/flyer-shake-the-city.jpg" target="_blank" rel="noopener">
+          <img src="images/flyer-shake-the-city.jpg" alt="Shake The City rooftop showdown flyer, West End Bar, Fayetteville AR" loading="lazy">
+        </a>
+        <a class="flyer" href="images/flyer-ybr-may9.jpg" target="_blank" rel="noopener">
+          <img src="images/flyer-ybr-may9.jpg" alt="Yellow Brick Road Tour flyer, Oklahoma City, May 9" loading="lazy">
+        </a>
+        <a class="flyer" href="images/flyer-th3-after.jpg" target="_blank" rel="noopener">
+          <img src="images/flyer-th3-after.jpg" alt="Th3 Aft3r Ubbi Dubbi afterparty flyer" loading="lazy">
+        </a>
+        <a class="flyer" href="images/flyer-warehouse.jpg" target="_blank" rel="noopener">
+          <img src="images/flyer-warehouse.jpg" alt="Warehouse Afterparty flyer, Oklahoma City" loading="lazy">
+        </a>
+        <a class="flyer" href="images/flyer-ybr-march7.jpg" target="_blank" rel="noopener">
+          <img src="images/flyer-ybr-march7.jpg" alt="Yellow Brick Road Tour flyer, Oklahoma City, March 7" loading="lazy">
+        </a>
+        <a class="flyer" href="images/flyer-yes-chef.jpg" target="_blank" rel="noopener">
+          <img src="images/flyer-yes-chef.jpg" alt="Yes Chef event flyer, Medley's Lounge OKC" loading="lazy">
+        </a>
+      </div>
+    </section>
+
     <section id="about" class="about">
       <div class="about-media">
-        <img src="images/studio.jpg" alt="Doosa in the studio" loading="lazy">
+        <img src="images/about2.jpg" alt="Doosa in the studio" loading="lazy">
       </div>
       <div class="about-copy">
-        <p class="section-tag">02 &mdash; About</p>
+        <p class="section-tag">03 &mdash; About</p>
         <h2>Vibration enthusiast from the midwest</h2>
         <p>I hope you're having a great day, and they just keep on getting better :) Made in Oklahoma, built for the dance floor &mdash; catch a set, catch a flip, catch some good vibes.</p>
       </div>
     </section>
 
     <section id="contact" class="contact">
-      <p class="section-tag">03 &mdash; Contact</p>
+      <img src="images/portrait.jpg" alt="Doosa portrait" class="contact-portrait" loading="lazy">
+      <p class="section-tag">04 &mdash; Contact</p>
       <h2>Let's link up</h2>
       <p class="contact-email">
         <a href="mailto:doosaofficial@gmail.com">doosaofficial@gmail.com</a>
@@ -155,7 +192,7 @@
     });
 
     // Fade-in on scroll
-    const revealEls = document.querySelectorAll('.section-head, .track-card, .about-media, .about-copy, .contact');
+    const revealEls = document.querySelectorAll('.section-head, .track-card, .about-media, .about-copy, .contact, .live-strip img, .flyer');
     revealEls.forEach(el => el.classList.add('reveal'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
