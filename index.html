@@ -1,63 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doosa</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doosa | Official Site</title>
+  <meta name="description" content="Doosa — sound art, mixes, and live sets. Vibration enthusiast from the midwest.">
+  <meta name="theme-color" content="#0d0b14">
+
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-            <h1>I'm happy you're here :p</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#home" class="nav-logo">
+        <img src="images/logo.png" alt="Doosa logo" class="nav-logo-img">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <section id="home" class="hero">
-    <img src="images/hero.jpg" alt="Doosa artwork" class="hero-img">
-    <div class="hero-text">
-        <h2>Sending good vibes your way</h2>
-        <p>Hope all your dreams come true</p>
-    </div>    </section>
+      <div class="hero-bg" style="background-image: url('images/hero.jpg');"></div>
+      <div class="hero-scrim"></div>
+      <div class="hero-content">
+        <img src="images/logo.png" alt="Doosa" class="hero-logo">
+        <p class="hero-eyebrow">Vibration enthusiast &middot; Midwest, USA</p>
+        <h1 class="hero-title">Sending good <span class="glow-text">vibes</span> your way</h1>
+        <p class="hero-sub">Hope all your dreams come true. Press play and let's get weird.</p>
+        <div class="hero-actions">
+          <a href="#music" class="btn btn-primary">Listen Now</a>
+          <a href="https://soundcloud.com/doosaofficial" target="_blank" rel="noopener" class="btn btn-ghost">SoundCloud &#8599;</a>
+        </div>
+      </div>
+      <a href="#music" class="scroll-cue" aria-label="Scroll to music">
+        <span></span>
+      </a>
+    </section>
 
     <section id="music" class="music-player">
+      <div class="section-head">
+        <p class="section-tag">01 &mdash; Sound Art</p>
         <h2>I would love for you to check out my sound art</h2>
-      
-     
-     <!-- Embed your SoundCloud or Spotify tracks here -->
+      </div>
 
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2192114071&color=%23746c6c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/doosaofficial" title="Doosa" target="_blank" style="color: #cccccc; text-decoration: none;">Doosa</a> · <a href="https://soundcloud.com/doosaofficial/tell-me-something" title="tell me something" target="_blank" style="color: #cccccc; text-decoration: none;">tell me something</a></div>     
-<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1929583691&color=%23525252&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/doosaofficial" title="Doosa" target="_blank" style="color: #cccccc; text-decoration: none;">Doosa</a> · <a href="https://soundcloud.com/doosaofficial/dogdreams" title="dogdreams" target="_blank" style="color: #cccccc; text-decoration: none;">dogdreams</a></div>
-     
-     <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1929583691&color=%23525252&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/doosaofficial" title="Doosa" target="_blank" style="color: #cccccc; text-decoration: none;">Doosa</a> · <a href="https://soundcloud.com/doosaofficial/dogdreams" title="dogdreams" target="_blank" style="color: #cccccc; text-decoration: none;">dogdreams</a></div>
-     
-     <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1882482255&color=%23c8c8c8&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/doosaofficial" title="Doosa" target="_blank" style="color: #cccccc; text-decoration: none;">Doosa</a> · <a href="https://soundcloud.com/doosaofficial/big-muffuka" title="BIg Muffuka" target="_blank" style="color: #cccccc; text-decoration: none;">BIg Muffuka</a></div>
-     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1925410949&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/doosaofficial" title="Doosa" target="_blank" style="color: #cccccc; text-decoration: none;">Doosa</a> · <a href="https://soundcloud.com/doosaofficial/million-dollar-baby-tommy-richman-doosa-flip" title="MILLION DOLLAR BABY - TOMMY RICHMAN (DOOSA FLIP)" target="_blank" style="color: #cccccc; text-decoration: none;">MILLION DOLLAR BABY - TOMMY RICHMAN (DOOSA FLIP)</a></div>
-        
-      <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1916207051&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/doosaofficial" title="Doosa" target="_blank" style="color: #cccccc; text-decoration: none;">Doosa</a> · <a href="https://soundcloud.com/doosaofficial/fall-back-lithe-doosa-flip" title="Fall Back - Lithe (doosa flip)" target="_blank" style="color: #cccccc; text-decoration: none;">Fall Back - Lithe (doosa flip)</a></div>
+      <div class="track-grid">
+
+        <article class="track-card">
+          <h3 class="track-title">tell me something</h3>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2192114071&color=%23ff2e93&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true">
+          </iframe>
+        </article>
+
+        <article class="track-card">
+          <h3 class="track-title">dogdreams</h3>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1929583691&color=%2300e5ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true">
+          </iframe>
+        </article>
+
+        <article class="track-card">
+          <h3 class="track-title">BIg Muffuka</h3>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1882482255&color=%23ff2e93&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true">
+          </iframe>
+        </article>
+
+        <article class="track-card">
+          <h3 class="track-title">MILLION DOLLAR BABY <span>(Doosa Flip)</span></h3>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1925410949&color=%2300e5ff&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true">
+          </iframe>
+        </article>
+
+        <article class="track-card">
+          <h3 class="track-title">Fall Back <span>(Doosa Flip)</span></h3>
+          <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1916207051&color=%23ff2e93&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true">
+          </iframe>
+        </article>
+
+      </div>
+
+      <a href="https://soundcloud.com/doosaofficial" target="_blank" rel="noopener" class="btn btn-primary full-catalog-btn">
+        Hear the full catalog on SoundCloud &#8599;
+      </a>
     </section>
 
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Vibration enthusiast from the midwest. I hope you're having a great day, and they just keep on getting better:)</p>
+      <div class="about-media">
+        <img src="images/studio.jpg" alt="Doosa in the studio" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <p class="section-tag">02 &mdash; About</p>
+        <h2>Vibration enthusiast from the midwest</h2>
+        <p>I hope you're having a great day, and they just keep on getting better :) Made in Oklahoma, built for the dance floor &mdash; catch a set, catch a flip, catch some good vibes.</p>
+      </div>
     </section>
 
     <section id="contact" class="contact">
-        <h2>doosaofficial@gmail.com</h2>
-        <p>Email: <a href="mailto:doosaofficial@gmail.com">doosaofficial@gmail.com</a></p>
+      <p class="section-tag">03 &mdash; Contact</p>
+      <h2>Let's link up</h2>
+      <p class="contact-email">
+        <a href="mailto:doosaofficial@gmail.com">doosaofficial@gmail.com</a>
+      </p>
+      <div class="social-links">
+        <a href="https://instagram.com/rylanray" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com/rylanray" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://soundcloud.com/doosaofficial" target="_blank" rel="noopener">SoundCloud</a>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy;<p></p> 2024 Doosa Music | Follow me on 
-            <a href="https://instagram.com/rylanray">Instagram.com/rylanray</a>,<a href="https://facebook.com/rylanray"</a>
-        </p>
-    </footer>
+  <footer class="site-footer">
+    <p>&copy; 2026 Doosa Music &middot; Follow along on
+      <a href="https://instagram.com/rylanray" target="_blank" rel="noopener">Instagram</a> &amp;
+      <a href="https://facebook.com/rylanray" target="_blank" rel="noopener">Facebook</a>
+    </p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fade-in on scroll
+    const revealEls = document.querySelectorAll('.section-head, .track-card, .about-media, .about-copy, .contact');
+    revealEls.forEach(el => el.classList.add('reveal'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Header shadow on scroll
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
 </body>
 </html>
