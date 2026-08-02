@@ -107,16 +107,44 @@
     </section>
 
     <section id="shows" class="shows">
-      <div class="section-head">
-        <p class="section-tag">02 &mdash; Live &amp; Shows</p>
-        <h2>On stage, on the flyer</h2>
-        <p class="shows-sub">A few recent nights behind the decks &mdash; and the lineups that made it happen.</p>
+      <div class="happy-spotlight">
+        <img src="images/portrait.jpg" alt="Doosa smiling under string lights &mdash; his happy place" loading="lazy">
+        <div class="happy-spotlight-scrim"></div>
+        <div class="happy-spotlight-content">
+          <p class="section-tag">02 &mdash; Live &amp; Shows</p>
+          <h2>My Happy Place</h2>
+          <p class="shows-sub">A few recent nights</p>
+        </div>
       </div>
 
-      <div class="live-strip">
-        <img src="images/live-1.jpg" alt="Doosa performing live" loading="lazy">
-        <img src="images/live-2.jpg" alt="Doosa performing live at a club show" loading="lazy">
-        <img src="images/live-3.jpg" alt="Crowd energy at a Doosa set" loading="lazy">
+      <div class="live-reel">
+        <div class="reel-item reel-video" style="aspect-ratio: 480 / 854;">
+          <video class="lazy-video" data-src="videos/clip-lightbar.mp4" poster="images/poster-lightbar.jpg" muted loop playsinline preload="none" aria-label="Doosa mixing under a light beam"></video>
+          <span class="reel-mute-badge" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+          </span>
+        </div>
+        <div class="reel-item reel-photo" style="aspect-ratio: 900 / 1346;">
+          <img src="images/live-1.jpg" alt="Doosa performing live" loading="lazy">
+        </div>
+        <div class="reel-item reel-video" style="aspect-ratio: 480 / 854;">
+          <video class="lazy-video" data-src="videos/clip-booth.mp4" poster="images/poster-booth.jpg" muted loop playsinline preload="none" aria-label="Doosa mixing at a club booth"></video>
+          <span class="reel-mute-badge" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+          </span>
+        </div>
+        <div class="reel-item reel-photo" style="aspect-ratio: 900 / 601;">
+          <img src="images/live-2.jpg" alt="Doosa performing live at a club show" loading="lazy">
+        </div>
+        <div class="reel-item reel-video" style="aspect-ratio: 720 / 406;">
+          <video class="lazy-video" data-src="videos/clip-outdoor.mp4" poster="images/poster-outdoor.jpg" muted loop playsinline preload="none" aria-label="Doosa mixing at an outdoor show"></video>
+          <span class="reel-mute-badge" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"></path><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+          </span>
+        </div>
+        <div class="reel-item reel-photo" style="aspect-ratio: 900 / 1200;">
+          <img src="images/live-3.jpg" alt="Crowd energy at a Doosa set" loading="lazy">
+        </div>
       </div>
 
       <div class="flyer-wall">
@@ -153,7 +181,6 @@
     </section>
 
     <section id="contact" class="contact">
-      <img src="images/portrait.jpg" alt="Doosa portrait" class="contact-portrait" loading="lazy">
       <p class="section-tag">04 &mdash; Contact</p>
       <h2>Let's link up</h2>
       <p class="contact-email">
@@ -192,7 +219,7 @@
     });
 
     // Fade-in on scroll
-    const revealEls = document.querySelectorAll('.section-head, .track-card, .about-media, .about-copy, .contact, .live-strip img, .flyer');
+    const revealEls = document.querySelectorAll('.section-head, .track-card, .about-media, .about-copy, .contact, .reel-item, .flyer');
     revealEls.forEach(el => el.classList.add('reveal'));
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -203,6 +230,24 @@
       });
     }, { threshold: 0.15 });
     revealEls.forEach(el => observer.observe(el));
+
+    // Lazy-load and autoplay reel videos once they scroll into view
+    const lazyVideos = document.querySelectorAll('.lazy-video');
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          if (!video.src) {
+            video.src = video.dataset.src;
+            video.load();
+          }
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.35 });
+    lazyVideos.forEach(v => videoObserver.observe(v));
 
     // Header shadow on scroll
     const header = document.querySelector('.site-header');
